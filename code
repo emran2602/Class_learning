@@ -1,0 +1,16 @@
+class Pizza:
+def __init__(self, toppings, sauces):
+self.toppings = toppings
+self.sauces = sauces
+def add_sauce(self, sauce):
+self.sauces = self.sauces + " and " + (sauce)
+return self.sauces
+def __str__(self):
+return f"Pizza with {self.toppings} and {self.sauces} sauce"
+
+
+pizzas = [Pizza("cheese", "red"), Pizza("olives", "pesto"), Pizza("ham", "ranch")]
+
+for pizza in pizzas:
+Pizza.add_sauce(pizza,"spicy honey")
+print(pizza)
